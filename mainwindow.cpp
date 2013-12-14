@@ -38,6 +38,8 @@ MainWindow::MainWindow(QWidget *parent) :
      ui->label_local_ip->setText(localIP);
      loadingImage = new QMovie(":/images/loading.gif");
      ui->loadingLabel->setMovie(loadingImage);
+
+     move(QApplication::desktop()->screenGeometry().center() - rect().center());
 }
 
 void MainWindow::onCommandSuccess(QString ip) {
