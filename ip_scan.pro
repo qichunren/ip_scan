@@ -8,7 +8,7 @@ QT       += core gui network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = ip_scan
+TARGET = bin/ip_scan
 TEMPLATE = app
 
 ICON = icon.icns
@@ -28,3 +28,5 @@ FORMS += \
 
 RESOURCES += \
     application.qrc
+
+OTHER_FILES += README.md
