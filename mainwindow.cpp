@@ -8,11 +8,10 @@
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow),
-    loadingImage(new QMovie(":/images/loading.gif"))
-{
-    onlineCount = 0;
+    loadingImage(new QMovie(":/images/loading.gif")),
+    onlineCount(0)
+{     
     ui->setupUi(this);
-    ui->tableWidget->setWindowTitle("ip list");
     ui->tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
     ui->tableWidget->setSelectionBehavior(QAbstractItemView::SelectRows);
     ui->tableWidget->setColumnCount(2);
