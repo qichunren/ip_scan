@@ -13,10 +13,10 @@ public:
     void setModel(QString model);
     void setVersion(QString version);
 
-    QString ip();
-    QString sn();
-    QString model();
-    QString version();
+    const QString &ip() const;
+    const QString &sn() const;
+    const QString &model() const;
+    const QString &version() const;
 
 signals:
 

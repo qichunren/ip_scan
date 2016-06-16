@@ -2,8 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QProcess>
-#include <QMovie>
 
 #include "shellprocess.h"
 #include "device.h"
@@ -13,6 +11,8 @@
 namespace Ui {
 class MainWindow;
 }
+
+class QMovie;
 
 class MainWindow : public QMainWindow
 {
@@ -36,11 +36,10 @@ public slots:
 
 private:
     Ui::MainWindow *ui;
-    QProcess *myProcess;
     QMovie *loadingImage;
 
 
-    QString get_localmachine_ip();
+    const QString get_localmachine_ip() const;
     QStringList generateRangeIP(QString ip1, QString ip2);
     QStringList scanHosts;
     QStringList to_scanHosts;

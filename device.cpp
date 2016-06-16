@@ -3,19 +3,19 @@
 Device::Device(QObject *parent) : QObject(parent) {
 }
 
-QString Device::ip() {
+const QString &Device::ip() const{
     return _ip;
 }
 
-QString Device::sn() {
+const QString &Device::sn() const{
     return _sn;
 }
 
-QString Device::model() {
+const QString &Device::model() const{
     return _model;
 }
 
-QString Device::version() {
+const QString &Device::version() const{
     return _version;
 }
 

@@ -3,10 +3,12 @@
 #include <QtWidgets>
 #include <QTableView>
 #include <QtNetwork>
+#include <QMovie>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::MainWindow)
+    ui(new Ui::MainWindow),
+    loadingImage(new QMovie(":/images/loading.gif"))
 {
     onlineCount = 0;
     ui->setupUi(this);
@@ -35,8 +37,7 @@ MainWindow::MainWindow(QWidget *parent) :
      // set default value.
      ui->lineEdit->setText(localIPList[0]+"."+localIPList[1]+"."+localIPList[2]+".1");
      ui->lineEdit_2->setText(localIPList[0]+"."+localIPList[1]+"."+localIPList[2]+".254");
-     ui->label_local_ip->setText(localIP);
-     loadingImage = new QMovie(":/images/loading.gif");
+     ui->label_local_ip->setText(localIP);     
      ui->loadingLabel->setMovie(loadingImage);
 
      move(QApplication::desktop()->screenGeometry().center() - rect().center());
@@ -248,8 +249,7 @@ QStringList MainWindow::generateRangeIP(QString ip1, QString ip2) {
  * 参数:no
  * 返回:QString
  */
-QString MainWindow::get_localmachine_ip()
-{
+const QString MainWindow::get_localmachine_ip() const{
     QString ipAddress;
     QList<QHostAddress> ipAddressesList = QNetworkInterface::allAddresses();
     // use the first non-localhost IPv4 address
@@ -271,7 +271,6 @@ MainWindow::~MainWindow()
 {
     delete loadingImage;
     delete ui;
-
 }
 
 void MainWindow::on_showOnlineDevicesButton_clicked() {
