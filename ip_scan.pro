@@ -29,4 +29,4 @@ FORMS += \
 RESOURCES += \
     application.qrc
 
-OTHER_FILES += README.md
+OTHER_FILES += README.md deb_build.sh

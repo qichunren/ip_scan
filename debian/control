@@ -1,0 +1,15 @@
+Source: ip-scan
+Section: unknown
+Priority: optional
+Maintainer: qichunren <whyruby@gmail.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.4
+Homepage: https://github.com/qichunren/ip_scan
+Vcs-Git: git@github.com:qichunren/ip_scan.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/ip-scan.git;a=summary
+
+Package: ip-scan
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends} libqt5widgets5
+Description: Scan devices in LAN.
+ Batch scan devices in LAN with ping command.

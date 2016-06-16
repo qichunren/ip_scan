@@ -1,0 +1,12 @@
+[Desktop Entry]
+  Version=1.0
+  Type=Application
+  Terminal=false
+  Name=ip-scan
+  Exec=/usr/bin/ip-scan
+  Comment=Ip scan tool.
+  Icon=/usr/share/pixmaps/ip-scan-icon.png
+  StartupNotify=false
+  Encoding=UTF-8
+  Categories=Development;
+

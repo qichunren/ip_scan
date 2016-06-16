@@ -1,0 +1,5 @@
+ip-scan (1.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- qichunren <whyruby@gmail.com>  Thu, 16 Jun 2016 14:22:21 +0800

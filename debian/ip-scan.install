@@ -1,0 +1,3 @@
+bin/ip_scan /usr/bin
+ip-scan.desktop /usr/share/applications
+ip-scan-icon.png /usr/share/pixmaps
